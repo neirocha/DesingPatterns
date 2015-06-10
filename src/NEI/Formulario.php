@@ -8,13 +8,17 @@
 namespace NEI;
 
 
-use NEI\INTERFACES\FormularioInterface;
+use NEI\INTERFECES\FormularioInterface;
 
 class Formulario implements FormularioInterface
 {
     public function creatField($type, $options = array())
     {
-        $class = ucfirst(strtolower($type));
+
+
+        $class = "src\\NEI\\TYPES\\".ucfirst(strtolower($type))."Type";
+
+
         if(!class_exists($class))
         {
            throw new \InvalidArgumentException('Não existe classe');

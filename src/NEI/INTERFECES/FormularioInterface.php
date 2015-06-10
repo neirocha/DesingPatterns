@@ -6,7 +6,7 @@
  * Time: 21:21
  */
 
-namespace NEI\INTERFACES;
+namespace NEI\INTERFECES;
 
 
 interface FormularioInterface

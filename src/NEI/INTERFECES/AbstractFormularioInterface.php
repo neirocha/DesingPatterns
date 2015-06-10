@@ -5,7 +5,7 @@
  * Date: 01/06/2015
  * Time: 20:01
  */
-namespace src\NEI\INTERFACES;
+namespace src\NEI\INTERFECES;
 
 interface AbstractFormularioInterface
 {

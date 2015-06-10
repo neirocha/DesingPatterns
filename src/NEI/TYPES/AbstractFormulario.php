@@ -8,8 +8,9 @@
 namespace NEI\TYPES;
 
 
-use src\NEI\INTERFACES\AbstractFormularioInterface;
-use src\NEI\INTERFACES\RenderInterface;
+
+use NEI\INTERFECES\AbstractFormularioInterface;
+use NEI\INTERFECES\RenderInterface;
 
 abstract class AbstractFormulario implements AbstractFormularioInterface, RenderInterface
 

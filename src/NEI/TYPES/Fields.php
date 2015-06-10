@@ -9,7 +9,7 @@
 namespace NEI\TYPES;
 
 
-use src\NEI\INTERFACES\AbstractFormularioInterface;
+use NEI\INTERFECES\AbstractFormularioInterface;
 
 abstract class Fields
 {

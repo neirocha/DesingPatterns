@@ -9,7 +9,7 @@
 namespace NEI\TYPES;
 
 
-use src\NEI\INTERFACES\InputTypeInterface;
+use NEI\INTERFECES\InputTypeInterface;
 
 
 class SubmitType extends AbstractFormulario implements InputTypeInterface

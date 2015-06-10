@@ -9,7 +9,7 @@
 namespace NEI\TYPES;
 
 use NEI\TYPES\AbstractFormulario;
-use src\NEI\INTERFACES\InputTypeInterface;
+use NEI\INTERFECES\InputTypeInterface;
 
 class InputType extends AbstractFormulario implements InputTypeInterface
 {
