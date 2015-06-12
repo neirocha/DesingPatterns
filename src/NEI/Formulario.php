@@ -9,14 +9,15 @@ namespace NEI;
 
 
 use NEI\INTERFECES\FormularioInterface;
+use NEI\TYPES\Fields;
 
-class Formulario implements FormularioInterface
+class Formulario extends Fields implements FormularioInterface
 {
     public function creatField($type, $options = array())
     {
 
 
-        $class = "src\\NEI\\TYPES\\".ucfirst(strtolower($type))."Type";
+        $class = "NEI\\TYPES\\".ucfirst(strtolower($type))."Type";
 
 
         if(!class_exists($class))

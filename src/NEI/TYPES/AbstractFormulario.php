@@ -23,45 +23,46 @@ abstract class AbstractFormulario implements AbstractFormularioInterface, Render
     protected $rows;
     protected $required;
     protected $size;
+    protected $label;
 
     public function getId()
     {
-        return $this->getId();
+        return $this->id;
     }
 
     public function getName()
     {
-        return $this->getName();
+        return $this->name;
     }
 
     public function getClass()
     {
-        return $this->getClass();
+        return $this->class;
     }
 
     public function getValue()
     {
-        return $this->getValue();
+        return $this->value;
     }
 
     public function getCols()
     {
-        return $this->getCols();
+        return $this->cols;
     }
 
     public function getRows()
     {
-        return $this->getRows();
+        return $this->rows;
     }
 
     public function getRequired()
     {
-        return $this->getRequired();
+        return $this->required;
     }
 
     public function getSize()
     {
-        return $this->getSize();
+        return $this->size;
     }
 
     public function setId($id)

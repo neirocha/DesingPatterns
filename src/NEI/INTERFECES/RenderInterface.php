@@ -6,7 +6,7 @@
  * Time: 21:03
  */
 
-namespace src\NEI\INTERFECES;
+namespace NEI\INTERFECES;
 
 
 interface RenderInterface
