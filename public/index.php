@@ -5,12 +5,28 @@ spl_autoload_register();
 
 use \NEI;
 
-$form = new \NEI\Formulario();
+$form1 = new \NEI\Formulario();
+$campo1 =$form1->creatField('Input', array('type'=>'text', 'name'=>'nome', 'size'=>'48', 'required'=>'required'));
+$form1->adiciona($campo1);
+
+$form2 = new \NEI\Formulario();
+$campo2 =$form2->creatField('Input', array('type'=>'text', 'name'=>'email', 'size'=>'48', 'required'=>'required'));
+$form2->adiciona($campo2);
+
+$form3 = new \NEI\Formulario();
+$campo3 =$form3->creatField('Input', array('type'=>'text', 'name'=>'assunto', 'size'=>'48', 'required'=>'required'));
+$form3->adiciona($campo3);
+
+$form4 = new \NEI\Formulario();
+$campo4 =$form4->creatField('Textarea', array('cols'=>'50', 'rows'=>'6', 'name'=>'mensagem', 'required'=>'required'));
+$form4->adiciona($campo4);
+
+$form5 = new \NEI\Formulario();
+$campo5 =$form5->creatField('Input', array('type'=>'submit', 'value'=>'Cadastrar'));
+$form5->adiciona($campo5);
 
 
-$nome = $form->creatField("Label", array('text' => 'Nome: ', 'class' =>  'col-md-1 control-label'));
-$campo1 =$form->creatField('Input', array('type'=>'text', 'required'=>'required'));
-$form->adiciona($nome)->adiciona($campo1);
+
 /*
 $nome = $form->creatField("Label", array('text' => 'Email: ', 'class' =>  'col-md-1 control-label'));
 $campo2 =$form->creatField('Input', array('type'=>'text', 'required'=>'required'));
@@ -42,15 +58,18 @@ $form->adiciona($nome)->adiciona($campo2);
 <body>
    <div class="container">
        <h1>Design Patterns</h1>
+       <br>
 
        <div class="row">
            <div class="col-md-12 column">
 
-<?php
-
-$form->render();
-
-?>
+               <table border="0">
+                   <tr><td>Nome:<?php $form1->render();?></td></tr>
+                   <tr><td>Email:<?php $form2->render();?></td></tr>
+                   <tr><td>Assunto:<?php $form3->render();?></td></tr>
+                   <tr><td>Menssagem:<?php $form4->render();?></td></tr>
+                   <tr><td><?php $form5->render();?></td></tr>
+               </table>
 
             </div>
         </div>

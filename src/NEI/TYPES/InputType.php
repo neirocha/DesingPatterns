@@ -28,7 +28,7 @@ class InputType extends AbstractFormulario implements InputTypeInterface
 
     public function render()
     {
-        $input = "<input type='{$this->getType()}' name='{$this->getName()}' class='{$this->getClass()}' required='{$this->getRequired()}' value='{$this->getValue()}' size='{$this->getSize()}'/>";
+        $input = " <input type='{$this->getType()}' name='{$this->getName()}' class='{$this->getClass()}' required='{$this->getRequired()}' value='{$this->getValue()}' size='{$this->getSize()}'/>";
         echo $input;
     }
 }

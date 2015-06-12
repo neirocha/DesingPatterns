@@ -41,7 +41,7 @@ class Formulario extends Fields implements FormularioInterface
 
     public function render()
     {
-        $formu = "<form action='formulario2.php' method='post'>";
+        $formu = '<form action="retorna.php" method="post">';
         echo $formu;
 
         foreach($this->fields as $campo)
@@ -49,7 +49,7 @@ class Formulario extends Fields implements FormularioInterface
             $campo->render();
         }
 
-        echo "</form><hr>";
+        echo "</form>";
     }
 
 
