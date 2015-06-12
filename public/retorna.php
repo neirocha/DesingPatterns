@@ -26,7 +26,7 @@
         <div class="col-md-12 column">
 
             <table border="0">
-                <tr><td>Nome:<?php echo $_GET['nome'];?></td></tr>
+                <tr><td>Nome:<?php echo $_POST['nome'];?></td></tr>
                 <tr><td>Email:<?php echo $_POST['email'];?></td></tr>
                 <tr><td>Assunto:<?php echo $_POST['assunto'];?></td></tr>
                 <tr><td>Menssagem:<?php echo $_POST['mensagem'];?></td></tr>
