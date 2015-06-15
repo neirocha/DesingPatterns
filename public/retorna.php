@@ -26,11 +26,11 @@
         <div class="col-md-12 column">
 
             <table border="0">
-                <tr><td>Nome:<?php echo $_POST['nome'];?></td></tr>
-                <tr><td>Email:<?php echo $_POST['email'];?></td></tr>
-                <tr><td>Assunto:<?php echo $_POST['assunto'];?></td></tr>
-                <tr><td>Menssagem:<?php echo $_POST['mensagem'];?></td></tr>
-                 </table>
+                <tr><td><i><b>Nome:</b></i> <?php echo $_POST['nome'];?></td></tr>
+                <tr><td><i><b>Email:</b></i> <?php echo $_POST['email'];?></td></tr>
+                <tr><td><i><b>Assunto:</b></i> <?php echo $_POST['assunto'];?></td></tr>
+                <tr><td><i><b>Mensagem:</b></i> <?php echo $_POST['mensagem'];?></td></tr>
+            </table>
 
         </div>
     </div>

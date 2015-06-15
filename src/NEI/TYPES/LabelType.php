@@ -28,19 +28,7 @@ class LabelType extends AbstractFormulario implements LabelTypeInterface
 
     public function render()
     {
-        $label1 = "<label class='{$this->getClass()}'>{$this->getText()}";
-        $label2 = "</label>";
-
-        echo $label1;
-
-        if(count($this->fields))
-        {
-            foreach($this->fields as $campo)
-            {
-                $campo->render();
-            }
-        }
-        echo $label2;
+        echo "<label class='{$this->getClass()}'>{$this->getText()}";
     }
 
 

@@ -4,7 +4,7 @@ set_include_path(get_include_path().PATH_SEPARATOR.CLASS_DIR);
 spl_autoload_register();
 
 use \NEI;
-
+/*
 $form1 = new \NEI\Formulario();
 $campo1 =$form1->creatField('Input', array('type'=>'text', 'name'=>'nome', 'size'=>'48', 'required'=>'required'));
 $form1->adiciona($campo1);
@@ -24,6 +24,37 @@ $form4->adiciona($campo4);
 $form5 = new \NEI\Formulario();
 $campo5 =$form5->creatField('Input', array('type'=>'submit', 'value'=>'Cadastrar'));
 $form5->adiciona($campo5);
+*/
+
+$form = new \NEI\Formulario();
+
+$br = $form->creatField('Br');
+$label1 = $form->creatField('Label', array('text'=> 'Nome:'));
+$label2 = $form->creatField('Label', array('text'=> 'Email:'));
+$label3 = $form->creatField('Label', array('text'=> 'Assunto:'));
+$label4 = $form->creatField('Label', array('text'=> 'Mesnsagem:'));
+$campo1 =$form->creatField('Input', array('type'=>'text', 'name'=>'nome', 'size'=>'48', 'required'=>'required'));
+$campo2 =$form->creatField('Input', array('type'=>'text', 'name'=>'email', 'size'=>'48', 'required'=>'required'));
+$campo3 =$form->creatField('Input', array('type'=>'text', 'name'=>'assunto', 'size'=>'48', 'required'=>'required'));
+$campo4 =$form->creatField('Textarea', array('cols'=>'50', 'rows'=>'6', 'name'=>'mensagem', 'required'=>'required'));
+$campo5 =$form->creatField('Input', array('type'=>'submit', 'value'=>'Cadastrar'));
+   $form->adiciona($label1)
+       ->adiciona($br)
+        ->adiciona($campo1)
+        ->adiciona($br)
+        ->adiciona($label2)
+       ->adiciona($br)
+        ->adiciona($campo2)
+        ->adiciona($br)
+        ->adiciona($label3)
+       ->adiciona($br)
+        ->adiciona($campo3)
+        ->adiciona($br)
+        ->adiciona($label4)
+       ->adiciona($br)
+        ->adiciona($campo4)
+        ->adiciona($br)
+        ->adiciona($campo5);
 
 
 
@@ -63,13 +94,9 @@ $form->adiciona($nome)->adiciona($campo2);
        <div class="row">
            <div class="col-md-12 column">
 
-               <table border="0">
-                   <tr><td>Nome:<?php $form1->render();?></td></tr>
-                   <tr><td>Email:<?php $form2->render();?></td></tr>
-                   <tr><td>Assunto:<?php $form3->render();?></td></tr>
-                   <tr><td>Menssagem:<?php $form4->render();?></td></tr>
-                   <tr><td><?php $form5->render();?></td></tr>
-               </table>
+               <?php
+               $form->render();
+               ?>
 
             </div>
         </div>
