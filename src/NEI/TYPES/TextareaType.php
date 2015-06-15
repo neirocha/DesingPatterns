@@ -27,7 +27,7 @@ class TextareaType extends AbstractFormulario
 
     public function render()
     {
-        $textareas = "<textarea name='{$this->getName()}' cols='{$this->getCols()}' rows='{$this->getRows()}' class='{$this->getClass()}'>{$this->getValue()}</textarea>";
+        $textareas = "</label><textarea name='{$this->getName()}' cols='{$this->getCols()}' rows='{$this->getRows()}' class='{$this->getClass()}'>{$this->getValue()}</textarea>";
         echo $textareas;
     }
 

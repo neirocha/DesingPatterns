@@ -4,27 +4,6 @@ set_include_path(get_include_path().PATH_SEPARATOR.CLASS_DIR);
 spl_autoload_register();
 
 use \NEI;
-/*
-$form1 = new \NEI\Formulario();
-$campo1 =$form1->creatField('Input', array('type'=>'text', 'name'=>'nome', 'size'=>'48', 'required'=>'required'));
-$form1->adiciona($campo1);
-
-$form2 = new \NEI\Formulario();
-$campo2 =$form2->creatField('Input', array('type'=>'text', 'name'=>'email', 'size'=>'48', 'required'=>'required'));
-$form2->adiciona($campo2);
-
-$form3 = new \NEI\Formulario();
-$campo3 =$form3->creatField('Input', array('type'=>'text', 'name'=>'assunto', 'size'=>'48', 'required'=>'required'));
-$form3->adiciona($campo3);
-
-$form4 = new \NEI\Formulario();
-$campo4 =$form4->creatField('Textarea', array('cols'=>'50', 'rows'=>'6', 'name'=>'mensagem', 'required'=>'required'));
-$form4->adiciona($campo4);
-
-$form5 = new \NEI\Formulario();
-$campo5 =$form5->creatField('Input', array('type'=>'submit', 'value'=>'Cadastrar'));
-$form5->adiciona($campo5);
-*/
 
 $form = new \NEI\Formulario();
 
