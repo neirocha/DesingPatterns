@@ -17,5 +17,6 @@ interface AbstractFormularioInterface
     public function setRows($rows);
     public function setRequired($required);
     public function setSize($size);
+    public function setFieldset($fieldset);
 
 }

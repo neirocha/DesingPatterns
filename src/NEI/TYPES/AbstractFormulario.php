@@ -24,6 +24,18 @@ abstract class AbstractFormulario implements AbstractFormularioInterface, Render
     protected $required;
     protected $size;
     protected $label;
+    protected $fieldset;
+
+    public function getFieldset()
+    {
+        return $this->fieldset;
+    }
+
+    public function setFieldset($fieldset)
+    {
+        $this->fieldset = $fieldset;
+        return $this;
+    }
 
     public function getId()
     {

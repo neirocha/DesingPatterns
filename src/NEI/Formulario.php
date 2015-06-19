@@ -49,7 +49,7 @@ class Formulario extends Fields implements FormularioInterface
             $campo->render();
         }
 
-        echo " </form>";
+        echo "</form>";
     }
 
 
