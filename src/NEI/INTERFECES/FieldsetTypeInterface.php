@@ -11,6 +11,12 @@ namespace NEI\INTERFECES;
 
 interface FieldsetTypeInterface
 {
+    public function setLegend($legend);
+    public function setFields($fields);
     public function setFieldset($fieldset);
+    public function setField($field);
+    public function render();
+
+
 
 }

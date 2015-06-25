@@ -7,8 +7,11 @@ use \NEI;
 
 $form = new \NEI\Formulario();
 
-
-$fieldset = $form->creatField('Fieldset');
+$fieldset = $form->creatField("Fieldset", array('legend'=>"exemplo"));
+$inputNome = $form->creatField("Input", array("type"=>"text", "name"=>"nome"));
+$fieldset->adiciona($inputNome);
+$form->adiciona($fieldset);
+/*
 $br = $form->creatField('Br');
 $label1 = $form->creatField('Label', array('text'=> 'Nome:'));
 $label2 = $form->creatField('Label', array('text'=> 'Email:'));
@@ -19,22 +22,22 @@ $campo2 =$form->creatField('Input', array('type'=>'text', 'name'=>'email', 'size
 $campo3 =$form->creatField('Input', array('type'=>'text', 'name'=>'assunto', 'size'=>'48', 'required'=>'required'));
 $campo4 =$form->creatField('Textarea', array('cols'=>'50', 'rows'=>'6', 'name'=>'mensagem', 'required'=>'required'));
 $campo5 =$form->creatField('Input', array('type'=>'submit', 'value'=>'Cadastrar'));
-   $form->adiciona($fieldset)
+   $form
        ->adiciona($label1)
        ->adiciona($br)
        ->adiciona($campo1)
         ->adiciona($br)
-       ->adiciona($fieldset)
+
         ->adiciona($label2)
        ->adiciona($br)
         ->adiciona($campo2)
         ->adiciona($br)
-       ->adiciona($fieldset)
+
         ->adiciona($label3)
        ->adiciona($br)
         ->adiciona($campo3)
         ->adiciona($br)
-       ->adiciona($fieldset)
+
         ->adiciona($label4)
        ->adiciona($br)
         ->adiciona($campo4)
@@ -42,11 +45,6 @@ $campo5 =$form->creatField('Input', array('type'=>'submit', 'value'=>'Cadastrar'
         ->adiciona($campo5);
 
 
-
-/*
-$nome = $form->creatField("Label", array('text' => 'Email: ', 'class' =>  'col-md-1 control-label'));
-$campo2 =$form->creatField('Input', array('type'=>'text', 'required'=>'required'));
-$form->adiciona($nome)->adiciona($campo2);
 
 */
 

@@ -12,5 +12,6 @@ namespace NEI\INTERFECES;
 interface LabelTypeInterface
 {
     public function setText($text);
+    public function render();
 
 }
