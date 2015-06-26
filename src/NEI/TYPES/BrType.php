@@ -8,7 +8,6 @@
 
 namespace NEI\TYPES;
 
-
 use NEI\INTERFECES\TableTypeInterface;
 
 class BrType extends AbstractFormulario
@@ -17,5 +16,4 @@ class BrType extends AbstractFormulario
     {
         echo "<br />";
     }
-
 }

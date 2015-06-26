@@ -19,4 +19,5 @@ interface AbstractFormularioInterface
     public function setSize($size);
     public function setFieldset($fieldset);
 
+
 }

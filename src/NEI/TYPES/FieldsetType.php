@@ -11,11 +11,11 @@ namespace NEI\TYPES;
 
 use NEI\INTERFECES\FieldsetTypeInterface;
 
-
-class FieldsetType extends Fields implements FieldsetTypeInterface
+class FieldsetType extends AbstractFormulario implements FieldsetTypeInterface
 {
     protected $legend;
-    protected $field;
+    protected $fields = array();
+
 
     public function setLegend($legend)
     {
@@ -27,22 +27,27 @@ class FieldsetType extends Fields implements FieldsetTypeInterface
     {
         return $this->legend;
     }
-
-    public function setField($field)
+    public function getFields()
     {
-        $this->field = $field;
+        return $this->fields;
+    }
+
+    public function setFields($fields)
+    {
+        $this->fields = $fields;
         return $this;
     }
 
-    public function getField()
+    public function render()
     {
-        $fieldset = "<fieldset><legend>{$this->legend}</legend>";
-        foreach($this->fields as $field) {
-            $fieldset .= $field->getField();
+        echo "<fieldset><legend>{$this->legend}</legend>";
+        foreach($this->fields as $campo)
+        {
+            $campo->render();
         }
-        $fieldset .= "</fieldset>";
-    }
 
+        echo "</fieldset>";
+    }
 
 
 }

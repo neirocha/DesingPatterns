@@ -11,6 +11,7 @@ namespace NEI\TYPES;
 
 use NEI\INTERFECES\AbstractFormularioInterface;
 
+
 abstract class Fields
 {
     protected $fields = array();
@@ -24,6 +25,12 @@ abstract class Fields
     public function getFields()
     {
         return $this->fields;
+    }
+
+    public function setFields($fields)
+    {
+        $this->fields = $fields;
+        return $this;
     }
 
 }
