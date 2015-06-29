@@ -15,8 +15,19 @@ class FieldsetType extends AbstractFormulario implements FieldsetTypeInterface
 {
     protected $legend;
     protected $fields = array();
+    protected $field;
 
 
+    public function getField()
+    {
+        return $this->field;
+    }
+
+    public function setField($field)
+    {
+        $this->field = $field;
+        return $this;
+    }
     public function setLegend($legend)
     {
         $this->legend = $legend;
@@ -32,18 +43,19 @@ class FieldsetType extends AbstractFormulario implements FieldsetTypeInterface
         return $this->fields;
     }
 
-    public function setFields($fields)
+    public function setFields($field)
     {
-        $this->fields = $fields;
-        return $this;
-    }
+        $this->fields[] = $field;
 
+    }
+    
+//17099621554
     public function render()
     {
         echo "<fieldset><legend>{$this->legend}</legend>";
-        foreach($this->fields as $campo)
+        foreach($this->fields as $field)
         {
-            $campo->render();
+            $field->render();
         }
 
         echo "</fieldset>";
